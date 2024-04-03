@@ -1,0 +1,26 @@
+﻿@model DataDrivenField.Models.User
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
+<body>
+    <form action="@Url.Action("LoginPost")"method="post">
+    <div>
+        <lable>Username:</lable>@Html.TextBoxFor(x => x.Username)<br /><br />
+        <lable>Password:</lable>@Html.PasswordFor(x => x.Password)
+
+    </div>
+    <div>
+        <input type="submit" value="Login" style="background-color: green; color: white;" />
+
+    </div>
+    </form>
+</body>
+</html>

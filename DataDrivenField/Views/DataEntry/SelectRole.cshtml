@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "SelectRole";
+}
+
+<h2>SelectRole</h2>
+
+<form action="@Url.Action("SelectRolePost")" method="post">
+    <div>
+        @Html.DropDownList("Roles", new SelectList(ViewBag.UserRoles))
+    </div>
+
+    <input type="submit" value="Submit" style="background-color: green; color: white;" />
+</form>
+
